@@ -1,13 +1,41 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0px;
+  color: var(--mainDark) !important;
+  font-family: Oswald, sans-serif !important;
+  background-color: var(--mainWhite) !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: "Oswald";
+  src: local("Oswald"),
+    url("./fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PermanentMarkerRegular";
+  src: local("PermanentMarkerRegular"),
+    url("./fonts/PermanentMarker-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+
+
+
+
+/* Notes... */
+/* .woff -> format("woff"),
+.ttf -> format("truetype")
+.eot -> format('embedded-opentype')
+.svg#vtks_sonhoregular _> format('svg') */

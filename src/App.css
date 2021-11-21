@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  font-size: 3.2rem;
+  color: var(--mainWhite);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text__title {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-family: PermanentMarkerRegular;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text__blue {
+  color: var(--mainBlue);
+}
+
+.text__bright {
+  color: var(--lightBlue);
+}
+
+.cart__span {
+  color: #eee;
+}
+
+.cart__span:hover {
+  text-decoration: underline;
+}
+
+.cart__btn {
+  transition: transform 500ms;
+}
+
+.cart__btn:hover {
+  color: black;
+  transform: scale(1.08);
+}
+
+.modal__button__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.btn .badge {
+  font-size: x-small;
+  top: -13px !important;
+  left: -11px;
+  padding: 3px 6px !important;
+  background-color: #857d13;
+  border-radius: 50% !important;
+}
+
+.empty {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn__black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.6em !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.1em solid var(--mainDark) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn__black:hover {
+  background: var(--mainDark);
+  color: var(--mainWhite) !important;
+}
+
+.cart__icon {
+  cursor: pointer;
+  font-size: 1.6em;
+  color: var(--mainYellow);
+}
+
+.total__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
