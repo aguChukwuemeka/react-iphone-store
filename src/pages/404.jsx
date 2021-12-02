@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ButtonContainer } from "../stylesComponents/button";
 
 export default function NotFoundPage(props) {
-  console.log(props);
+  const location = useLocation();
+  // console.log(location);
   return (
     <div className="container">
       <div className="row">
@@ -12,8 +13,9 @@ export default function NotFoundPage(props) {
           <h1>error</h1>
           <h2>page not found</h2>
           <h3>
-            the requested url
-            <span className="text-danger">{props.location.pathname}</span> was
+            the requested url:
+            {/* <span className="text-danger">{props?.location?.pathname}</span> was */}
+            <span className="text-danger ms-2">{location?.pathname}</span> was
             not found
           </h3>
           <div className="my-3 py-3">

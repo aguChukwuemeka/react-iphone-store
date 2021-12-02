@@ -20,7 +20,7 @@ export default function Product({ product }) {
     <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
       <div className="card">
         <div className="img-container p-5">
-          <Link to={`/product-detail/${slug}`}>
+          <Link to={`/products/${slug}`}>
             <img src={img} alt={title} className="card-img-top" />
           </Link>
           <button

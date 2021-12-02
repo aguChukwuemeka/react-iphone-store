@@ -1,11 +1,12 @@
 import React from "react";
 import { useStateValue } from "../context/stateProvider";
 import Title from "../components/title";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ButtonContainer } from "../stylesComponents/button";
+import NotFoundPage from './404'
 
-export default function ProductDetail({ match }) {
-  
+export default function ProductDetail({match}) {
+  const { slug } = useParams();
   const [{ products }, dispatch] = useStateValue();
 
   function handleAddToCart() {
@@ -14,14 +15,22 @@ export default function ProductDetail({ match }) {
       type: "ADD_TOcART",
       id,
     });
+    dispatch({ type: "ADD_TOTAL" });
   }
 
   function getProductItem(slug) {
     return products.find((product) => product.slug === slug);
   }
+  
+  const productItem = getProductItem(slug);
+  console.log("Product-Item : ", productItem);
 
-  const productItem = getProductItem(match.params.slug);
+  // const productItem = getProductItem(match.params.slug);
+  // console.log('Path-Match : ', match);
 
+  
+  if (!productItem) return <NotFoundPage />
+  
   const { id, title, img, price, company, info, inCart } = productItem;
 
   return (
